@@ -166,6 +166,7 @@ resource "aws_eip" "eip_app" {
   vpc      = true
 }
 resource "aws_eip_association" "eip_assoc_app" {
+    depends_on  = [aws_instance.app]
   instance_id   = aws_instance.app.id
   allocation_id = aws_eip.eip_app.id
 }
