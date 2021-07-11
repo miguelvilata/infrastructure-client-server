@@ -9,7 +9,7 @@ variable "region" {
 ##INSTANCIA EC2 CONFIG##
 ########################
 variable "instance_type" {
-  description = "Instance Type from the jenkins"
+  description = "Instance Type from the EC2"
   default     = "t3.small"
 }
 
@@ -38,7 +38,7 @@ variable "dns_zone_id" {
   default = "Z00531613R4SJT0CLAZ4Q" 
 }
 
-variable "jenkins_userdata" {
+variable "app_userdata" {
   description = "File Script from configure instance"
   default     = "userdata_amz.tpl"
 }
