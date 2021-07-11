@@ -92,6 +92,7 @@ resource "aws_iam_policy" "app_policy" {
     ]
 }
 POLICY
+}
 resource "aws_iam_policy_attachment" "app_attach" {
   name       = "${var.project}-${var.application}-${var.env}"
   roles      = [aws_iam_role.app_role.name]
