@@ -5,6 +5,9 @@ variable "region" {
   default = "eu-west-1"
 }
 
+variable "s3_bucket" {
+  default = "terraform-devops-dev"
+}
 ########################
 ##INSTANCIA EC2 CONFIG##
 ########################
