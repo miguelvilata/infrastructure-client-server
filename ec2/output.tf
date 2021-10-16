@@ -7,7 +7,6 @@ output "public_ip" {
 output "dns_cname" {
   value = aws_route53_record.app.name
 }
-
 output "sg" {
   value = aws_security_group.app.name
 }

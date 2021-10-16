@@ -98,6 +98,16 @@ resource "aws_iam_role_policy_attachment" "ssm_attach" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
+#################
+## Upload app s3 
+#################
+
+## Upload files after bucket creations ##
+resource "aws_s3_bucket_object" "upload_files" {
+  bucket = var.s3_bucket
+  key    = "client-server/app.zip"
+  source = "./code/app.zip"
+}
 #################################
 ##IDENTIFIED THE USER-DATA FILE##
 #################################
