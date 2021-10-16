@@ -105,7 +105,7 @@ resource "aws_iam_role_policy_attachment" "ssm_attach" {
 ## Upload files after bucket creations ##
 resource "aws_s3_bucket_object" "upload_files" {
   bucket = var.s3_bucket
-  key    = "client-server"
+  key    = "client-server/app.zip"
   source = "./code/app.zip"
 }
 #################################
